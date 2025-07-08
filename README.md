@@ -12,7 +12,7 @@ For each training batch, generate $k$ label-preserving augmentations of each inp
 ### Mathematical Formulation
 
 Given input batch $\mathbf{x} \in \mathbb{R}^{B \times C \times H \times W}$ with labels $\mathbf{y}$, generate $k$ augmentations:
-$$\{\tilde{\mathbf{x}}_1, \tilde{\mathbf{x}}_2, \ldots, \tilde{\mathbf{x}}_k\} = \{T_1(\mathbf{x}), T_2(\mathbf{x}), \ldots, T_k(\mathbf{x})\}$$
+$\{\tilde{\mathbf{x}}_1, \tilde{\mathbf{x}}_2, \ldots, \tilde{\mathbf{x}}_k\} = \{T_1(\mathbf{x}), T_2(\mathbf{x}), \ldots, T_k(\mathbf{x})\}$
 
 where $T_i$ are label-preserving transformations (rotation, flip, brightness, noise).
 
