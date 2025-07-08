@@ -17,14 +17,10 @@ $\{\tilde{\mathbf{x}}_1, \tilde{\mathbf{x}}_2, \ldots, \tilde{\mathbf{x}}_k\} = 
 
 where $T_i$ are label-preserving transformations (rotation, flip, brightness, noise).
 
-Obtain predictions for each view: \\
+Obtain predictions for each view:   
 
-$$\mathbf{z}_i = f_\theta(\tilde{\mathbf{x}}_i) \in \mathbb{R}^{B \times C}$$
+$$\mathbf{z}_i = f_\theta(\tilde{\mathbf{x}}_i) \in \mathbb{R}^{B \times C}$$   
 $$\mathbf{p}_i = \text{softmax}(\mathbf{z}_i) \in \mathbb{R}^{B \times C}$$
-
-
-$$ \mathbf{z}_i = f_\theta(\tilde{\mathbf{x}}_i) \in \mathbb{R}^{B \times C} $$
-$$ \mathbf{p}_i = \text{softmax}(\mathbf{z}_i) \in \mathbb{R}^{B \times C} $$
 
 The **Augmentation Consistency Loss** combines standard cross-entropy with a consistency penalty:
 
