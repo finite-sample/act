@@ -12,13 +12,15 @@ For each training batch, generate $k$ label-preserving augmentations of each inp
 ### Mathematical Formulation
 
 Given input batch $\mathbf{x} \in \mathbb{R}^{B \times C \times H \times W}$ with labels $\mathbf{y}$, generate $k$ augmentations:
+
 $\{\tilde{\mathbf{x}}_1, \tilde{\mathbf{x}}_2, \ldots, \tilde{\mathbf{x}}_k\} = \{T_1(\mathbf{x}), T_2(\mathbf{x}), \ldots, T_k(\mathbf{x})\}$
 
 where $T_i$ are label-preserving transformations (rotation, flip, brightness, noise).
 
 Obtain predictions for each view:
-$$\mathbf{z}_i = f_\theta(\tilde{\mathbf{x}}_i) \in \mathbb{R}^{B \times C}$$
-$$\mathbf{p}_i = \text{softmax}(\mathbf{z}_i) \in \mathbb{R}^{B \times C}$$
+
+$\mathbf{z}_i = f_\theta(\tilde{\mathbf{x}}_i) \in \mathbb{R}^{B \times C}$
+$\mathbf{p}_i = \text{softmax}(\mathbf{z}_i) \in \mathbb{R}^{B \times C}$
 
 The **Augmentation Consistency Loss** combines standard cross-entropy with a consistency penalty:
 
