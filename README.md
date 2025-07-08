@@ -17,20 +17,20 @@ $\{\tilde{\mathbf{x}}_1, \tilde{\mathbf{x}}_2, \ldots, \tilde{\mathbf{x}}_k\} = 
 
 where $T_i$ are label-preserving transformations (rotation, flip, brightness, noise).
 
-Obtain predictions for each view:   
-
+Obtain predictions for each view:    
+    
 $$\mathbf{z}_i = f_\theta(\tilde{\mathbf{x}}_i) \in \mathbb{R}^{B \times C}$$   
 $$\mathbf{p}_i = \text{softmax}(\mathbf{z}_i) \in \mathbb{R}^{B \times C}$$
 
 The **Augmentation Consistency Loss** combines standard cross-entropy with a consistency penalty:
 
-$$\mathcal{L}_{\text{pred}} = \frac{1}{k} \sum_{i=1}^k \text{CrossEntropy}(\mathbf{z}_i, \mathbf{y})$$
+$$\mathcal{L}_{\text{pred}} = \frac{1}{k} \sum_{i=1}^k \text{CrossEntropy}(\mathbf{z}_i, \mathbf{y})$$    
 
-$$\mathcal{L}_{\text{consistency}} = \frac{1}{\binom{k}{2}} \sum_{1 \leq i < j \leq k} \frac{1}{2}\left[ D_{\text{KL}}(\mathbf{p}_i \| \mathbf{p}_j) + D_{\text{KL}}(\mathbf{p}_j \| \mathbf{p}_i) \right]$$
+$$\mathcal{L}_{\text{consistency}} = \frac{1}{\binom{k}{2}} \sum_{1 \leq i < j \leq k} \frac{1}{2}\left[ D_{\text{KL}}(\mathbf{p}_i \| \mathbf{p}_j) + D_{\text{KL}}(\mathbf{p}_j \| \mathbf{p}_i) \right]$$    
 
-$$\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{pred}} + \lambda \mathcal{L}_{\text{consistency}}$$
+$$\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{pred}} + \lambda \mathcal{L}_{\text{consistency}}$$    
 
-where $D_{\text{KL}}$ is the Kullback-Leibler divergence and $\lambda$ controls the consistency strength.
+where $D_{\text{KL}}$ is the Kullback-Leibler divergence and $\lambda$ controls the consistency strength.    
 
 ### Implementation
 
