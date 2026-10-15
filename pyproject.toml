@@ -1,0 +1,29 @@
+[project]
+name = "act"
+version = "0.1.0"
+description = "Does augmentation-consistency training make independently trained models agree more? A frontier comparison on CIFAR-10."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "datasets>=5.1.0",
+    "joblib>=1.6.0",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scikit-learn>=1.7.2",
+    "torch",
+]
+
+[dependency-groups]
+dev = ["black", "flake8", "isort", "pytest"]
+
+[tool.uv]
+package = false
+
+[tool.isort]
+profile = "black"
+known_first_party = ["act", "dct"]
+skip_gitignore = true
+
+[tool.pytest.ini_options]
+pythonpath = [".", "experiments/dct"]
