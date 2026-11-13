@@ -66,7 +66,7 @@ memory = Memory("cache", verbose=0)
 
 
 def load_cifar():
-    """CIFAR-10 as normalised float tensors ((X_train, y_train), (X_test, y_test)).
+    """CIFAR-10 as normalized float tensors ((X_train, y_train), (X_test, y_test)).
 
     From the Hugging Face mirror (uoft-cs/cifar10): the Toronto host that
     torchvision downloads from serves ~50 KB/s.
