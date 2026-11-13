@@ -1,4 +1,4 @@
-"""Stability-accuracy frontier for DCT vs matched-compute and regularised baselines.
+"""Stability-accuracy frontier for DCT vs matched-compute and regularized baselines.
 
 Per trial (as in the notebook): hold out 30% as a test set, split the rest
 into two disjoint halves, train one model per half with the same method, and

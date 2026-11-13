@@ -9,7 +9,7 @@ isolates the penalty.
 Fraternal dropout (Zolna et al. 2018) shows the pairwise penalty is twice the
 variance of the predictions across dropout masks; for a linear layer that
 variance is a data-weighted ridge penalty (Wager, Wang & Liang 2013). So the
-natural yardstick is ordinary regularisation, swept to trace a frontier.
+natural yardstick is ordinary regularization, swept to trace a frontier.
 """
 
 import numpy as np

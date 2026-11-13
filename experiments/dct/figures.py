@@ -52,7 +52,7 @@ def frontier(df, key="dataset", base="standard"):
     """Paired change vs `base` in accuracy (x) and hard agreement (y).
 
     Pairing on trial removes split-to-split variation, which otherwise swamps
-    differences between arms. An arm beats the regularisation frontier if it
+    differences between arms. An arm beats the regularization frontier if it
     sits above the blue points at the same x.
     """
     cells = list(df[key].unique())
